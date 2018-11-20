@@ -14,7 +14,7 @@ function takeANumber(current, newP){
 function nowServing(current){
   var serving;
   var noOne = "There is nobody waiting to be served!";
-  if (current[0]) {
+  if (current.length > 0) {
     serving = "Currently serving " + current[0] + ".";
     current.shift();
     return serving;
@@ -27,7 +27,7 @@ function currentLine(current){
   var inLine = "The line is currently: ";
   var noOne = "The line is currently empty.";
   var position;
-  if (current[0]) {
+  if (current.length > 0) {
     for (var i = 0; i < current.length; i++) {
       position = i+1;
       if(i < current.length-1){
