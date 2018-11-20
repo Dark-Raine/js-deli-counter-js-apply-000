@@ -1,13 +1,16 @@
-function takeANumber(current, newP){
- current.push(newP);
+function takeANumber(current){
+
  var response;
  var position;
- for (var i = 0; i < current.length; i++) {
-   if (current[i] === newP) {
-     position = i+1;
-     response = "Welcome, " + current[i] + ". You are number " + position + " in line."
-   }
+ if (current.length > 0) {
+   position = current[current.length-1];
+
+ }else {
+   position = 0;
  }
+
+ current.push(position+1);
+
  return response;
 }
 
